@@ -13,5 +13,6 @@ namespace DatingApp.API.Data
         //"Values" - will be table name when sql created
         //"Value - which the entity
         public DbSet<Value> Values { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

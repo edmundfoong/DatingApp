@@ -32,6 +32,8 @@ namespace DatingApp.API
             services.AddDbContext<DataContext>(x =>x.UseSqlite (Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddCors(); // To enable web page from making AJAX requests to another domain
+            services.AddScoped<IAuthRepository,AuthRepository>(); //Registration and injection into controller
+
 
         }
 
